@@ -1,3 +1,5 @@
+-- {{ config(materialized='view') }}
+
 
 version: 1
 

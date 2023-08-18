@@ -1839,3 +1839,315 @@ drop view if exists "marketing"."public"."zoho4tik_dbt_model2__dbt_backup" casca
 [0m15:51:49.119050 [debug] [MainThread]: Command `dbt run` succeeded at 15:51:49.119050 after 10.56 seconds
 [0m15:51:49.119050 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C3D13A2B60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C3D441AEF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C3D441AF50>]}
 [0m15:51:49.120050 [debug] [MainThread]: Flushing usage events
+[0m22:40:02.035270 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E0B2B2B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E0DFFEB00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E0DFFE860>]}
+
+
+============================== 22:40:02.040293 | 4de1a0d1-d28f-4395-82c3-bbfb1b5e66a0 ==============================
+[0m22:40:02.040293 [info ] [MainThread]: Running with dbt=1.6.0
+[0m22:40:02.041256 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\as4ti\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\as4ti\\OneDrive\\PowerBI\\Projects\\AgileEnginePBI\\Git_hub\\sakila_dbt\\logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m22:40:02.208749 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4de1a0d1-d28f-4395-82c3-bbfb1b5e66a0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E072DCBE0>]}
+[0m22:40:02.217743 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4de1a0d1-d28f-4395-82c3-bbfb1b5e66a0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E0E138D90>]}
+[0m22:40:02.219737 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m22:40:02.229605 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m22:40:02.924613 [debug] [MainThread]: Partial parsing enabled: 3 files deleted, 0 files added, 0 files changed.
+[0m22:40:02.925610 [debug] [MainThread]: Partial parsing: deleted file: sakila_dbt://models\example\zoho4tik_dbt_model2.sql
+[0m22:40:02.925610 [debug] [MainThread]: Partial parsing: deleted file: sakila_dbt://models\example\zoho4tik_dbt_model1.sql
+[0m22:40:02.930606 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.sakila_dbt.example
+[0m22:40:02.935577 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4de1a0d1-d28f-4395-82c3-bbfb1b5e66a0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E0E2D40D0>]}
+[0m22:40:02.956908 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4de1a0d1-d28f-4395-82c3-bbfb1b5e66a0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E0E188D30>]}
+[0m22:40:02.956908 [info ] [MainThread]: Found 1 model, 2 tests, 0 sources, 0 exposures, 0 metrics, 349 macros, 0 groups, 0 semantic models
+[0m22:40:02.957913 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4de1a0d1-d28f-4395-82c3-bbfb1b5e66a0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E0E188EE0>]}
+[0m22:40:02.960314 [info ] [MainThread]: 
+[0m22:40:02.961426 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m22:40:02.963508 [debug] [ThreadPool]: Acquiring new postgres connection 'list_marketing'
+[0m22:40:02.973690 [debug] [ThreadPool]: Using postgres connection "list_marketing"
+[0m22:40:02.973690 [debug] [ThreadPool]: On list_marketing: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "sakila_conn", "target_name": "dev", "connection_name": "list_marketing"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m22:40:02.974814 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:40:04.063087 [debug] [ThreadPool]: SQL status: SELECT 9 in 1.0 seconds
+[0m22:40:04.066071 [debug] [ThreadPool]: On list_marketing: Close
+[0m22:40:04.069025 [debug] [ThreadPool]: Acquiring new postgres connection 'list_marketing_public'
+[0m22:40:04.075046 [debug] [ThreadPool]: Using postgres connection "list_marketing_public"
+[0m22:40:04.076339 [debug] [ThreadPool]: On list_marketing_public: BEGIN
+[0m22:40:04.076339 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:40:05.085939 [debug] [ThreadPool]: SQL status: BEGIN in 1.0 seconds
+[0m22:40:05.085939 [debug] [ThreadPool]: Using postgres connection "list_marketing_public"
+[0m22:40:05.086936 [debug] [ThreadPool]: On list_marketing_public: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "sakila_conn", "target_name": "dev", "connection_name": "list_marketing_public"} */
+select
+      'marketing' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'marketing' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'marketing' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m22:40:05.227027 [debug] [ThreadPool]: SQL status: SELECT 78 in 0.0 seconds
+[0m22:40:05.230017 [debug] [ThreadPool]: On list_marketing_public: ROLLBACK
+[0m22:40:05.352879 [debug] [ThreadPool]: On list_marketing_public: Close
+[0m22:40:05.365835 [debug] [MainThread]: Using postgres connection "master"
+[0m22:40:05.366832 [debug] [MainThread]: On master: BEGIN
+[0m22:40:05.366832 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:40:06.376526 [debug] [MainThread]: SQL status: BEGIN in 1.0 seconds
+[0m22:40:06.378525 [debug] [MainThread]: Using postgres connection "master"
+[0m22:40:06.379522 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "sakila_conn", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m22:40:06.535595 [debug] [MainThread]: SQL status: SELECT 31 in 0.0 seconds
+[0m22:40:06.540624 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4de1a0d1-d28f-4395-82c3-bbfb1b5e66a0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E0E31C610>]}
+[0m22:40:06.542580 [debug] [MainThread]: On master: ROLLBACK
+[0m22:40:06.667241 [debug] [MainThread]: Using postgres connection "master"
+[0m22:40:06.667241 [debug] [MainThread]: On master: BEGIN
+[0m22:40:06.914939 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m22:40:06.915905 [debug] [MainThread]: On master: COMMIT
+[0m22:40:06.916901 [debug] [MainThread]: Using postgres connection "master"
+[0m22:40:06.917898 [debug] [MainThread]: On master: COMMIT
+[0m22:40:07.042169 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m22:40:07.043170 [debug] [MainThread]: On master: Close
+[0m22:40:07.045114 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m22:40:07.046110 [info ] [MainThread]: 
+[0m22:40:07.052448 [debug] [Thread-1 (]: Began running node model.sakila_dbt.freezed_cand1
+[0m22:40:07.053447 [info ] [Thread-1 (]: 1 of 1 START sql view model public.freezed_cand1 ............................... [RUN]
+[0m22:40:07.055438 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.sakila_dbt.freezed_cand1'
+[0m22:40:07.055438 [debug] [Thread-1 (]: Began compiling node model.sakila_dbt.freezed_cand1
+[0m22:40:07.066513 [debug] [Thread-1 (]: Writing injected SQL for node "model.sakila_dbt.freezed_cand1"
+[0m22:40:07.067509 [debug] [Thread-1 (]: Timing info for model.sakila_dbt.freezed_cand1 (compile): 22:40:07.056434 => 22:40:07.067509
+[0m22:40:07.068544 [debug] [Thread-1 (]: Began executing node model.sakila_dbt.freezed_cand1
+[0m22:40:07.109826 [debug] [Thread-1 (]: Writing runtime sql for node "model.sakila_dbt.freezed_cand1"
+[0m22:40:07.110823 [debug] [Thread-1 (]: Using postgres connection "model.sakila_dbt.freezed_cand1"
+[0m22:40:07.111820 [debug] [Thread-1 (]: On model.sakila_dbt.freezed_cand1: BEGIN
+[0m22:40:07.111820 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m22:40:08.137649 [debug] [Thread-1 (]: SQL status: BEGIN in 1.0 seconds
+[0m22:40:08.139642 [debug] [Thread-1 (]: Using postgres connection "model.sakila_dbt.freezed_cand1"
+[0m22:40:08.140621 [debug] [Thread-1 (]: On model.sakila_dbt.freezed_cand1: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "sakila_conn", "target_name": "dev", "node_id": "model.sakila_dbt.freezed_cand1"} */
+
+  create view "marketing"."public"."freezed_cand1__dbt_tmp"
+    
+    
+  as (
+    -- 
+
+select *
+from public.freezed_candidate_data a
+limit 10
+  );
+[0m22:40:08.341610 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m22:40:08.354533 [debug] [Thread-1 (]: Using postgres connection "model.sakila_dbt.freezed_cand1"
+[0m22:40:08.355546 [debug] [Thread-1 (]: On model.sakila_dbt.freezed_cand1: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "sakila_conn", "target_name": "dev", "node_id": "model.sakila_dbt.freezed_cand1"} */
+alter table "marketing"."public"."freezed_cand1" rename to "freezed_cand1__dbt_backup"
+[0m22:40:08.484354 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m22:40:08.491376 [debug] [Thread-1 (]: Using postgres connection "model.sakila_dbt.freezed_cand1"
+[0m22:40:08.493330 [debug] [Thread-1 (]: On model.sakila_dbt.freezed_cand1: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "sakila_conn", "target_name": "dev", "node_id": "model.sakila_dbt.freezed_cand1"} */
+alter table "marketing"."public"."freezed_cand1__dbt_tmp" rename to "freezed_cand1"
+[0m22:40:08.620156 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m22:40:08.640140 [debug] [Thread-1 (]: On model.sakila_dbt.freezed_cand1: COMMIT
+[0m22:40:08.641108 [debug] [Thread-1 (]: Using postgres connection "model.sakila_dbt.freezed_cand1"
+[0m22:40:08.641108 [debug] [Thread-1 (]: On model.sakila_dbt.freezed_cand1: COMMIT
+[0m22:40:08.769098 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m22:40:08.780107 [debug] [Thread-1 (]: Using postgres connection "model.sakila_dbt.freezed_cand1"
+[0m22:40:08.780107 [debug] [Thread-1 (]: On model.sakila_dbt.freezed_cand1: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "sakila_conn", "target_name": "dev", "node_id": "model.sakila_dbt.freezed_cand1"} */
+drop view if exists "marketing"."public"."freezed_cand1__dbt_backup" cascade
+[0m22:40:08.914251 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m22:40:08.918243 [debug] [Thread-1 (]: Timing info for model.sakila_dbt.freezed_cand1 (execute): 22:40:07.069503 => 22:40:08.917244
+[0m22:40:08.919248 [debug] [Thread-1 (]: On model.sakila_dbt.freezed_cand1: Close
+[0m22:40:08.920786 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4de1a0d1-d28f-4395-82c3-bbfb1b5e66a0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E0E3C3430>]}
+[0m22:40:08.922425 [info ] [Thread-1 (]: 1 of 1 OK created sql view model public.freezed_cand1 .......................... [[32mCREATE VIEW[0m in 1.87s]
+[0m22:40:08.924469 [debug] [Thread-1 (]: Finished running node model.sakila_dbt.freezed_cand1
+[0m22:40:08.927218 [debug] [MainThread]: Using postgres connection "master"
+[0m22:40:08.928205 [debug] [MainThread]: On master: BEGIN
+[0m22:40:08.928205 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m22:40:10.029079 [debug] [MainThread]: SQL status: BEGIN in 1.0 seconds
+[0m22:40:10.031057 [debug] [MainThread]: On master: COMMIT
+[0m22:40:10.032065 [debug] [MainThread]: Using postgres connection "master"
+[0m22:40:10.033007 [debug] [MainThread]: On master: COMMIT
+[0m22:40:10.161118 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m22:40:10.162120 [debug] [MainThread]: On master: Close
+[0m22:40:10.164114 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:40:10.166110 [debug] [MainThread]: Connection 'list_marketing' was properly closed.
+[0m22:40:10.167157 [debug] [MainThread]: Connection 'list_marketing_public' was properly closed.
+[0m22:40:10.168101 [debug] [MainThread]: Connection 'model.sakila_dbt.freezed_cand1' was properly closed.
+[0m22:40:10.177504 [info ] [MainThread]: 
+[0m22:40:10.178484 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 7.21 seconds (7.21s).
+[0m22:40:10.179475 [debug] [MainThread]: Command end result
+[0m22:40:10.187417 [info ] [MainThread]: 
+[0m22:40:10.188414 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:40:10.189412 [info ] [MainThread]: 
+[0m22:40:10.190407 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m22:40:10.191823 [debug] [MainThread]: Command `dbt run` succeeded at 22:40:10.191823 after 8.18 seconds
+[0m22:40:10.192852 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E0B2B2B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E0E3C3B20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E0E3B1CF0>]}
+[0m22:40:10.193820 [debug] [MainThread]: Flushing usage events
+[0m22:52:42.027465 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000177D4D82AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000177D7ACAA40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000177D7ACA7A0>]}
+
+
+============================== 22:52:42.030455 | 1209b2ab-d23c-4027-a6fc-69b79d72da5e ==============================
+[0m22:52:42.030455 [info ] [MainThread]: Running with dbt=1.6.0
+[0m22:52:42.032462 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\as4ti\\.dbt', 'log_path': 'C:\\Users\\as4ti\\OneDrive\\PowerBI\\Projects\\AgileEnginePBI\\Git_hub\\sakila_dbt\\logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m22:52:42.123381 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1209b2ab-d23c-4027-a6fc-69b79d72da5e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000177D0E1CBE0>]}
+[0m22:52:42.130359 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1209b2ab-d23c-4027-a6fc-69b79d72da5e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000177D7C00CD0>]}
+[0m22:52:42.132352 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m22:52:42.139342 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m22:52:42.146305 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m22:52:42.147277 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '1209b2ab-d23c-4027-a6fc-69b79d72da5e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000177D7C03850>]}
+[0m22:52:42.155270 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Error reading sakila_dbt: test_dbt1\schema.yml - Runtime Error
+    Syntax error near line 4
+    ------------------------------
+    1  | -- {{ config(materialized='view') }}
+    2  | 
+    3  | 
+    4  | version: 1
+    5  | 
+    6  | models:
+    7  |   - name: freezed_cand1
+    
+    Raw Error:
+    ------------------------------
+    mapping values are not allowed in this context
+      in "<unicode string>", line 4, column 8
+[0m22:52:42.156405 [debug] [MainThread]: Command `dbt run` failed at 22:52:42.156405 after 0.14 seconds
+[0m22:52:42.156405 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000177D4D82AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000177D7D23BB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000177D7D23AF0>]}
+[0m22:52:42.156405 [debug] [MainThread]: Flushing usage events
+[0m22:53:55.040907 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000202047E2B30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002020752AAA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002020752A800>]}
+
+
+============================== 22:53:55.045046 | 6501d395-8fba-421a-bfc3-531bd8ab2b96 ==============================
+[0m22:53:55.045046 [info ] [MainThread]: Running with dbt=1.6.0
+[0m22:53:55.045976 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\as4ti\\.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\as4ti\\OneDrive\\PowerBI\\Projects\\AgileEnginePBI\\Git_hub\\sakila_dbt\\logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m22:53:55.135881 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6501d395-8fba-421a-bfc3-531bd8ab2b96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002020080CBE0>]}
+[0m22:53:55.143156 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6501d395-8fba-421a-bfc3-531bd8ab2b96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020207660C70>]}
+[0m22:53:55.144633 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m22:53:55.151614 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m22:53:55.158590 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m22:53:55.159511 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '6501d395-8fba-421a-bfc3-531bd8ab2b96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000202076634F0>]}
+[0m22:53:55.164535 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Error reading sakila_dbt: test_dbt1\schema.yml - Runtime Error
+    Syntax error near line 4
+    ------------------------------
+    1  | -- {{ config(materialized='view') }}
+    2  | 
+    3  | 
+    4  | version: 1
+    5  | 
+    6  | models:
+    7  |   - name: freezed_cand1
+    
+    Raw Error:
+    ------------------------------
+    mapping values are not allowed in this context
+      in "<unicode string>", line 4, column 8
+[0m22:53:55.165528 [debug] [MainThread]: Command `dbt run` failed at 22:53:55.165528 after 0.14 seconds
+[0m22:53:55.166529 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000202047E2B30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020207783BE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020207783A90>]}
+[0m22:53:55.167487 [debug] [MainThread]: Flushing usage events
+[0m22:55:10.738567 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B8B57F2B00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B8B853EA70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B8B853E830>]}
+
+
+============================== 22:55:10.742530 | 8e67d64f-1ed2-43c4-a7db-a6de23d1b7f9 ==============================
+[0m22:55:10.742530 [info ] [MainThread]: Running with dbt=1.6.0
+[0m22:55:10.743542 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\as4ti\\.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\as4ti\\OneDrive\\PowerBI\\Projects\\AgileEnginePBI\\Git_hub\\sakila_dbt\\logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m22:55:10.827828 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8e67d64f-1ed2-43c4-a7db-a6de23d1b7f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B8B180CBE0>]}
+[0m22:55:10.835801 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8e67d64f-1ed2-43c4-a7db-a6de23d1b7f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B8B8678E80>]}
+[0m22:55:10.836799 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m22:55:10.843813 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m22:55:10.850791 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m22:55:10.850791 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '8e67d64f-1ed2-43c4-a7db-a6de23d1b7f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B8B867B490>]}
+[0m22:55:10.857888 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Error reading sakila_dbt: test_dbt1\schema.yml - Runtime Error
+    Syntax error near line 4
+    ------------------------------
+    1  | -- {{ config(materialized='view') }}
+    2  | 
+    3  | 
+    4  | version: 1
+    5  | 
+    6  | models:
+    7  |   - name: freezed_cand1
+    
+    Raw Error:
+    ------------------------------
+    mapping values are not allowed in this context
+      in "<unicode string>", line 4, column 8
+[0m22:55:10.859339 [debug] [MainThread]: Command `dbt run` failed at 22:55:10.859339 after 0.13 seconds
+[0m22:55:10.859339 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B8B57F2B00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B8B878FC10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B8B878FAC0>]}
+[0m22:55:10.860831 [debug] [MainThread]: Flushing usage events
