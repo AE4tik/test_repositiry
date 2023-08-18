@@ -3,9 +3,7 @@
     
     
   as (
-    -- 
-
-select *
-from public.freezed_candidate_data a
-limit 10
+    select *
+from public.freezed_candidate_data a
+limit 5
   );
