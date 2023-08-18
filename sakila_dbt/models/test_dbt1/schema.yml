@@ -1,9 +1,9 @@
 
-version: 2
+version: 1
 
 models:
-  - name: zoho4tik_dbt_model1
-    description: "A starter dbt model"
+  - name: freezed_cand1
+    description: "A test of view creation"
     columns:
       - name: id
         description: "The primary key for this table"
@@ -11,11 +11,11 @@ models:
           - unique
           - not_null
 
-  - name: zoho4tik_dbt_model2
-    description: "A starter dbt model"
-    columns:
-      - name: id
-        description: "The primary key for this table"
-        tests:
-          - unique
-          - not_null
+  # - name: zoho4tik_dbt_model2
+  #   description: "A starter dbt model"
+  #   columns:
+  #     - name: id
+  #       description: "The primary key for this table"
+  #       tests:
+  #         - unique
+  #         - not_null
