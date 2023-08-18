@@ -4799,3 +4799,22 @@ having count(*) > 1
 [0m23:58:50.678526 [debug] [MainThread]: Command `dbt test` succeeded at 23:58:50.678526 after 6.83 seconds
 [0m23:58:50.678526 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013F216F2B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013F2472C8E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013F244FAE90>]}
 [0m23:58:50.679524 [debug] [MainThread]: Flushing usage events
+[0m00:39:32.406415 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C726AD2B30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C72981A9B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C72981A770>]}
+
+
+============================== 00:39:32.409454 | b91dbf8a-83cc-4d66-b606-89094d58ca87 ==============================
+[0m00:39:32.409454 [info ] [MainThread]: Running with dbt=1.6.0
+[0m00:39:32.410403 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\as4ti\\.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\as4ti\\OneDrive\\PowerBI\\Projects\\AgileEnginePBI\\Git_hub\\sakila_dbt\\logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt deps', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m00:39:32.460788 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b91dbf8a-83cc-4d66-b606-89094d58ca87', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C72981AA70>]}
+[0m00:39:32.462775 [debug] [MainThread]: Set downloads directory='C:\Users\as4ti\AppData\Local\Temp\dbt-downloads-j742kohi'
+[0m00:39:32.463733 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m00:39:32.652380 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m00:39:32.654384 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m00:39:32.785521 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m00:39:32.795489 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m00:39:33.654672 [info ] [MainThread]: Installed from version 1.1.1
+[0m00:39:33.655684 [info ] [MainThread]: Up to date!
+[0m00:39:33.656680 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'b91dbf8a-83cc-4d66-b606-89094d58ca87', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C7298882B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C72988B400>]}
+[0m00:39:33.658170 [debug] [MainThread]: Command `dbt deps` succeeded at 00:39:33.658170 after 1.26 seconds
+[0m00:39:33.659274 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C726AD2B30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C72981AA70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C72988B970>]}
+[0m00:39:33.660656 [debug] [MainThread]: Flushing usage events
